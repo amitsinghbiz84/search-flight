@@ -1,0 +1,62 @@
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 10px;    
+    @include respond-to(1023px) {
+        padding: 0;
+        display: flex;
+        flex-direction: row;        
+    }
+}
+
+.left-container ,
+.right-container {
+    @include respond-to(1023px) {
+        margin: 0 15px;    
+    }
+}
+
+.left-container {
+    width: 100%;
+    @include respond-to(1023px) {
+        width: 30%;    
+    }
+}
+
+.right-container {
+    width: 100%;
+
+    @include respond-to(1023px) {
+        width: 70%;       
+    }
+}
+
+.half-container {
+    float: left;
+    width: 50%;
+}
+
+img {
+    width: 100%;
+}
+
+.btn {
+    @include button-bg(#2ecc71);
+    padding: 10px 20px;
+    display: block;
+    margin-top: 30px;
+    @include respond-to(1023px) {
+        display: inline-block;        
+    }
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 24px;
+}

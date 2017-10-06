@@ -1,0 +1,35 @@
+$space : 10px;
+.search-result {
+    background: $color-white;
+    @include respond-to(1023px) {
+        padding: 0 $space+5;
+    }
+
+    .left-container {
+        text-align: center;
+        @include respond-to(1023px) {
+            order: 1;        
+        }
+    }
+
+    .right-container {
+        @include clearfix();
+        // padding: $space*2;
+        // @include respond-to(1023px) {
+        //     padding: 0;
+        // } 
+    }
+    p,
+    h3,
+    h4 {
+        margin: $space 0;
+    }
+    
+    .container {
+        padding: $space*4 $space*2;        
+        border-bottom: 2px solid $color-grey-40;
+        @include respond-to(1023px) {
+            padding: $space*4 0;        
+        }   
+    }
+}

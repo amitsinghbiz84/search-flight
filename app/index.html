@@ -1,0 +1,114 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search Flight</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <!-- Place favicon.ico in the root directory -->
+
+
+    <!-- build:css css/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- endbuild -->
+
+
+    <!-- build:js js/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header>
+      <h1>Flight Search</h1>
+    </header>
+    
+    <main>
+      <div class="container">
+          <aside class="left-container search">
+            <ul class="search__tab">
+              <li>One Way</li>
+              <li>Return</li>
+            </ul>
+            <div class="search__tab-container">
+              <form>
+                <input type="text" name="orginCity" placeholder="Enter Orgin City">
+                <input type="text" name="destCity" placeholder="Enter Destination City">
+                <label for="depart">Departure Date</label>
+                <input type="datetime-local" name="departTime" id="depart">
+                <label for="return">Return Date</label>
+                <input type="datetime-local" name="returnTime" id="return">
+                <select>
+                  <option value="">Passengers</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+
+          </aside>
+
+          <section id="flightResult" class="right-container search-result">                        
+          </section>
+      </div>
+               
+
+    </main>
+    
+
+    
+
+
+    <!-- build:js js/vendor.js -->
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+    <!-- build:js js/main.js -->
+    <script id="resultsTemplate" type="text/x-handlebars-template">
+        {{#each flightResult}}
+          <article class="container">
+            <div class="left-container">
+                <img src="{{img}}" alt="image-name"/>
+                <a href="#" class="btn">Book This Flight</a>
+              </div>
+              <div class="right-container">
+                <h2>{{flightRate}}</h2>
+                <div class="half-container">
+                  <p>{{flightName}}</p>
+                  <h3>{{from}} > {{to}}</h3>
+                  <h4>Depart : {{departureTime}}</h4>
+                  <h4>Arrive : {{arrivalTime}}</h4>
+                </div>
+                <div class="half-container">
+                  <p>{{flightName}}</p>
+                  <h3>{{from}} > {{to}}</h3>
+                  <h4>Depart : {{departureTime}}</h4>
+                  <h4>Arrive : {{arrivalTime}}</h4>
+                </div>
+              </div>
+            </article>
+
+        {{/each}}
+      </script>
+    <script src="js/handlebars-v4.0.10.js"></script>
+    <script src="js/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

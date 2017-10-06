@@ -1,0 +1,54 @@
+$space : 10px;
+.search {
+    background: $color-white;
+    @include respond-to(1023px) {
+        padding: $space*2 $space*2 $space*5 $space*2;    
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: $space;
+        padding: $space+5;
+        box-sizing: border-box;
+        @include respond-to(1023px) {
+            padding: $space;           
+        }
+    }
+
+    &__tab {
+        list-style-type: none;
+        border-bottom: 1px solid $color-grey-40;
+        margin-bottom: $space*2;
+        clear: both;
+        display: table;
+        width: 100%;
+        box-sizing: border-box;
+        padding: $space*2 $space 0 $space;
+
+        @include respond-to(1023px) {
+            padding: 0; 
+        }
+        
+
+        li {
+            font-size: 14px;
+            //color: $color-black;
+            display: inline-block;
+            border: 1px solid $color-grey-40;
+            padding: $space+5;
+            border-bottom: 0;
+            cursor: pointer;
+            &:first-child {
+                border-right: 0;
+            }
+        }
+    }
+
+    &__tab-container {
+        padding: $space*2 $space 0 $space;
+
+        @include respond-to(1023px) {
+            padding: 0; 
+        }   
+    }
+}

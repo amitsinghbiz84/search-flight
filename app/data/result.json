@@ -1,0 +1,37 @@
+{
+  "flightResult": [
+    {
+      "id": 0,
+      "flightName": "Indigo",
+      "from": "Goa",
+      "to": "Delhi",
+      "departureTime": "02:30pm",
+      "arrivalTime": "03:30pm",
+      "date": "03/20/2016",
+      "flightRate": "1500 INR",
+      "img": "images/image-placeholder.png"
+    },
+    {
+      "id": 1,
+      "flightName": "Spice Jet",
+      "from": "Goa",
+      "to": "Delhi",
+      "departureTime": "02:30pm",
+      "arrivalTime": "03:30pm",
+      "date": "03/20/2016",
+      "flightRate": "1500 INR",
+      "img": "images/image-placeholder.png"
+    },
+    {
+      "id": 3,
+      "flightName": "Jet Airways",
+      "from": "Goa",
+      "to": "Delhi",
+      "departureTime": "02:30pm",
+      "arrivalTime": "03:30pm",
+      "date": "03/20/2016",
+      "flightRate": "1500 INR",
+      "img": "images/image-placeholder.png"
+    }
+  ]
+}
