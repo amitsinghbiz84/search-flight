@@ -14,8 +14,8 @@ var browserify = require('browserify');
 
 var isDevelopment = (process.env.ENVIRONMENT !== "production");
 
-
-gulp.task('stylesheet', ['sprites'], function () {
+//gulp.task('stylesheet', ['sprites'], function () {
+gulp.task('stylesheet', function () {
   return gulp.src('app/css/main.scss')
     .pipe($.if(isDevelopment, $.sourcemaps.init()))
     .pipe($.sass({
